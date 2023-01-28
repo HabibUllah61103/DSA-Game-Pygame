@@ -3,6 +3,7 @@ import sys
 from setting import *
 from maps import *
 from player import *
+from raycasting import *
 
 
 class Game:
@@ -16,13 +17,15 @@ class Game:
     def new_game(self):
         self.map = Maps(self)
         self.player = Player(self)
+        self.ray_casting = RayCasting(self)
 
     def update(self):
+        self.player.update()
+        self.ray_casting.update()
         pg.display.flip()
         self.clock.tick(FPS)
         self.delta_time = self.clock.tick(FPS)
         pg.display.set_caption(f"FPS: {self.clock.get_fps():.2f}") 
-        self.player.update()
 
     def draw(self):
         self.screen.fill('BLACK')
