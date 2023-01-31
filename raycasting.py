@@ -110,7 +110,8 @@ class RayCasting:
             # DRAW THE RAYS FOR THE PURPOSE OF DEBUGGING
             # Draw the ray from the player to the intersection point as a line
             pg.draw.line(self.game.screen, 'YELLOW', (ox * 100, oy * 100),
-                         (ox * 100 + 100 * depth * cos_a, oy * 100 + 100 * depth_vert * sin_a), 2)
+                         (100 * ox + 100 * depth * cos_a, 100 * oy + 100 * depth * sin_a), 2)
+            # Increase the ray angle by the delta angle
             ray_angle += DELTA_ANGLE
 
     def update(self):
