@@ -2,6 +2,10 @@
 
 A 3D first-person shooter game built with Python and Pygame, featuring raycasting technology for 3D rendering. This project demonstrates advanced game development concepts including 3D rendering, collision detection, NPC pathfinding, and interactive gameplay mechanics.
 
+## Latest Release
+
+Download the latest release from the [Releases](https://github.com/HabibUllah61103/Pygame-Raycaster/releases) page.
+
 ## Features
 
 - 🎮 First-person shooter gameplay
@@ -59,9 +63,10 @@ A 3D first-person shooter game built with Python and Pygame, featuring raycastin
 
 ### Method 2: Using the Executable
 
-1. Download the latest release from the releases section
-2. Extract the zip file
-3. Run the executable file (main.exe)
+1. Go to the [Releases](https://github.com/HabibUllah61103/Pygame-Raycaster/releases) page
+2. Download the latest release zip file
+3. Extract the zip file
+4. Run the executable file (main.exe)
 
 ## Controls
 
