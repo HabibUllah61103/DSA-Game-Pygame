@@ -43,7 +43,9 @@ A 3D first-person shooter game built with Python and Pygame, featuring raycastin
 - Python 3.x
 - Pygame
 
-## Installation
+## Installation and Running
+
+### Method 1: Running from Source
 
 1. Clone the repository
 2. Install required dependencies:
@@ -55,12 +57,27 @@ A 3D first-person shooter game built with Python and Pygame, featuring raycastin
    python main.py
    ```
 
+### Method 2: Using the Executable
+
+1. Download the latest release from the releases section
+2. Extract the zip file
+3. Run the executable file (main.exe)
+
 ## Controls
 
 - WASD - Movement
 - Mouse - Look around
 - Left Click - Shoot
 - ESC - Quit game
+
+## Gameplay Instructions
+
+1. Start the game using either Method 1 or Method 2 above
+2. Use WASD keys to move around the map
+3. Use the mouse to look around
+4. Left-click to shoot enemies
+5. Press ESC key to exit the game at any time
+6. Survive and eliminate all enemies to win
 
 ## Development
 
@@ -71,6 +88,24 @@ This project serves as a demonstration of various game development concepts and 
 - Game state management
 - Collision detection
 - Interactive gameplay mechanics
+
+## Building the Executable
+
+To create your own executable:
+
+1. Install PyInstaller:
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Create the executable:
+
+   ```bash
+   pyinstaller --onefile --windowed --add-data "resources;resources" --add-data "resource_path.py;." main.py
+   ```
+
+3. The executable will be created in the `dist` folder
 
 ## License
 

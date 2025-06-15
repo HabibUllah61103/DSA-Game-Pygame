@@ -2,6 +2,7 @@ import pygame as pg
 from settings import *
 import os
 from collections import deque
+from resource_path import resource_path
 
 
 class SpriteObject:
@@ -14,7 +15,7 @@ class SpriteObject:
         self.game = game
         self.player = game.player 
         self.x, self.y = pos
-        self.image = pg.image.load(path).convert_alpha()    
+        self.image = pg.image.load(resource_path(path)).convert_alpha()    
         self.IMAGE_WIDTH = self.image.get_width()
         self.IMAGE_HALF_WIDTH = self.image.get_width() // 2
         self.IMAGE_RATIO = self.IMAGE_WIDTH / self.image.get_height()
@@ -122,8 +123,8 @@ class AnimatedSprite(SpriteObject):
 
     def get_images(self, path):
         images = deque()    # Set images
-        for file_name in os.listdir(path):  # Loop through os.listdir(path)
-            if os.path.isfile(os.path.join(path, file_name)):   # If os.path.isfile(os.path.join(path, file_name))
-                img = pg.image.load(path + '/' + file_name).convert_alpha() # Set img
+        for file_name in os.listdir(resource_path(path)):  # Loop through os.listdir(path)
+            if os.path.isfile(os.path.join(resource_path(path), file_name)):   # If os.path.isfile(os.path.join(path, file_name))
+                img = pg.image.load(os.path.join(resource_path(path), file_name)).convert_alpha() # Set img
                 images.append(img)  # Append img to images
         return images   # Return images
